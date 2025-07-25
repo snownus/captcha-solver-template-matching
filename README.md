@@ -50,3 +50,28 @@ The solution follows a three-step process:
 ```bash
 pip install numpy pillow
 ```
+
+### Dataset Structure
+
+Unzip the provided dataset so that the directory looks like this:
+
+```
+sampleCaptchas/ 
+   input/ 
+      input00.jpg 
+      input01.jpg 
+      ... 
+
+   output/ 
+      output00.txt 
+      output01.txt 
+      ... 
+```
+
+### Run the Inference
+
+```bash
+solver = Captcha()
+solver("path_to/unseen_captcha.jpg", "output_prediction.txt")
+```
+This will save the predicted 5-character CAPTCHA string into output_prediction.txt. A practical example is shown in `__main__` function of `Captcha.py` and can run directly to test. 
